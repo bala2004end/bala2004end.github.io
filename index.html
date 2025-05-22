@@ -23,18 +23,18 @@
     header {
       background: linear-gradient(to right, var(--primary), var(--secondary));
       color: white;
-      padding: 40px 20px;
+      padding: 50px 20px 30px 20px;
       text-align: center;
     }
 
     header h1 {
       margin: 0;
-      font-size: 36px;
+      font-size: 38px;
     }
 
     header p {
-      margin-top: 10px;
       font-size: 18px;
+      margin-top: 10px;
     }
 
     main {
@@ -45,15 +45,18 @@
 
     section {
       background-color: var(--card);
-      margin-bottom: 20px;
+      margin-bottom: 25px;
       padding: 20px;
       border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
     }
 
     h2 {
       color: var(--primary);
       margin-bottom: 10px;
+      border-bottom: 2px solid var(--primary);
+      display: inline-block;
+      padding-bottom: 5px;
     }
 
     a {
@@ -67,6 +70,31 @@
 
     ul {
       padding-left: 20px;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 10px;
+      list-style: none;
+      padding: 0;
+    }
+
+    .download-btn {
+      display: inline-block;
+      background: var(--primary);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      margin-top: 10px;
+      text-decoration: none;
+    }
+
+    footer {
+      background-color: var(--secondary);
+      text-align: center;
+      color: white;
+      padding: 15px;
     }
 
     @media (max-width: 600px) {
@@ -84,10 +112,11 @@
 
   <header>
     <h1>Balakrishnan M</h1>
-    <p>Computer Science Engineering Student</p>
+    <p>Aspiring Software Engineer | Problem Solver | Full-Stack Learner</p>
   </header>
 
   <main>
+
     <section>
       <h2>Contact</h2>
       <p><strong>Location:</strong> Paramakudi, Ramanathapuram</p>
@@ -107,15 +136,25 @@
     </section>
 
     <section>
-      <h2>Technologies</h2>
-      <p><strong>Languages:</strong> Java, C++, Python, HTML, CSS</p>
-      <p><strong>Tools & Frameworks:</strong> React, MongoDB, Firebase</p>
+      <h2>Skills</h2>
+      <ul class="skills-grid">
+        <li>Java</li>
+        <li>Python</li>
+        <li>C++</li>
+        <li>React</li>
+        <li>MongoDB</li>
+        <li>Firebase</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Git</li>
+        <li>GitHub</li>
+      </ul>
     </section>
 
     <section>
       <h2>Projects</h2>
-      <p><strong>Smart Assistive Wheelchair:</strong> Developed "Vision-Move", a hands-free wheelchair system using CNN-based eye movement detection and offline voice commands. Integrated ultrasonic sensors, Arduino, Raspberry Pi, and Zigbee for safe and reliable mobility.</p>
-      <p><strong>Smart Automatic Water Meter for Irrigation:</strong> Created a system using sensors to monitor water usage and automate irrigation based on soil moisture data, optimizing water consumption in agriculture.</p>
+      <p><strong>Smart Assistive Wheelchair:</strong> Developed "Vision-Move", a smart wheelchair system using CNN-based eye movement detection and offline voice commands (Vosk). Integrated ultrasonic sensors, Arduino, Raspberry Pi, and Zigbee for reliable real-time navigation and obstacle detection.</p>
+      <p><strong>Smart Automatic Water Meter for Irrigation:</strong> Built a sensor-driven irrigation system that monitors water flow and soil moisture, helping conserve water and automate precision agriculture.</p>
     </section>
 
     <section>
@@ -126,13 +165,31 @@
     </section>
 
     <section>
+      <h2>Certifications</h2>
+      <ul>
+        <li>Google IT Automation with Python (Coursera)</li>
+        <li>Full-Stack Web Development Bootcamp (Udemy)</li>
+      </ul>
+    </section>
+
+    <section>
       <h2>Achievements</h2>
       <ul>
         <li>Impairathon 2024</li>
         <li>Inter College Ideafest</li>
       </ul>
     </section>
+
+    <section>
+      <h2>Resume</h2>
+      <a href="Balakrishnan_resume.pdf" class="download-btn" download>📄 Download PDF Resume</a>
+    </section>
+
   </main>
+
+  <footer>
+    &copy; 2025 Balakrishnan M | Designed with ❤️ for the tech world
+  </footer>
 
 </body>
 </html>
