@@ -1,15 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sun Motion</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Balakrishnan M | Resume</title>
+  <style>
+    :root {
+      --primary: #4b6cb7;
+      --secondary: #182848;
+      --bg: #f4f4f4;
+      --card: #ffffff;
+      --text: #333333;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+    }
+
+    header {
+      background: linear-gradient(to right, var(--primary), var(--secondary));
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 36px;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 18px;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 20px;
+    }
+
+    section {
+      background-color: var(--card);
+      margin-bottom: 20px;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 28px;
+      }
+
+      header p {
+        font-size: 16px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="scene">
-        <div class="sun"></div>
-        <div class="moon"></div>
-    </div>
+
+  <header>
+    <h1>Balakrishnan M</h1>
+    <p>Computer Science Engineering Student</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Contact</h2>
+      <p><strong>Location:</strong> Paramakudi, Ramanathapuram</p>
+      <p><strong>Email:</strong> <a href="mailto:balav8253@gmail.com">balav8253@gmail.com</a></p>
+      <p><strong>Phone:</strong> <a href="tel:6381450973">6381450973</a></p>
+      <p>
+        <strong>Links:</strong> 
+        <a href="https://leetcode.com/u/Bala_123krishnan/" target="_blank">LeetCode</a> |
+        <a href="https://www.linkedin.com/in/balakrishnan-mahalingam-173367264/" target="_blank">LinkedIn</a> |
+        <a href="https://github.com/bala2004end" target="_blank">GitHub</a>
+      </p>
+    </section>
+
+    <section>
+      <h2>Profile</h2>
+      <p>As a passionate and dedicated computer science engineering student, I aim to leverage my technical knowledge and problem-solving skills in software engineering to create innovative and efficient solutions. My goal is to contribute to impactful projects while continuously learning and growing in a dynamic environment.</p>
+    </section>
+
+    <section>
+      <h2>Technologies</h2>
+      <p><strong>Languages:</strong> Java, C++, Python, HTML, CSS</p>
+      <p><strong>Tools & Frameworks:</strong> React, MongoDB, Firebase</p>
+    </section>
+
+    <section>
+      <h2>Projects</h2>
+      <p><strong>Smart Assistive Wheelchair:</strong> Developed "Vision-Move", a hands-free wheelchair system using CNN-based eye movement detection and offline voice commands. Integrated ultrasonic sensors, Arduino, Raspberry Pi, and Zigbee for safe and reliable mobility.</p>
+      <p><strong>Smart Automatic Water Meter for Irrigation:</strong> Created a system using sensors to monitor water usage and automate irrigation based on soil moisture data, optimizing water consumption in agriculture.</p>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <p><strong>PSNA College of Engineering and Technology</strong> – BE in Computer Science<br>GPA: 7.36/10 (till 4th Sem)</p>
+      <p><strong>Ayira Vaisiya Higher Secondary School</strong> – HSC: 72%</p>
+      <p><strong>Ayira Vaisiya Higher Secondary School</strong> – SSLC: 69%</p>
+    </section>
+
+    <section>
+      <h2>Achievements</h2>
+      <ul>
+        <li>Impairathon 2024</li>
+        <li>Inter College Ideafest</li>
+      </ul>
+    </section>
+  </main>
+
 </body>
 </html>
