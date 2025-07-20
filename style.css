@@ -1,0 +1,105 @@
+/* Basic scene setup */
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #2c3e50; /* Fallback background */
+}
+
+.scene {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  /* Animation for the sky's color change */
+  animation: sky-change 15s infinite linear;
+}
+
+/* Styling for the sun and moon */
+.sun, .moon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.sun {
+  background-color: #f1c40f;
+  box-shadow: 0 0 20px #f1c40f, 0 0 40px #f1c40f;
+  /* Animation to move the sun in an arc */
+  animation: sun-path 15s infinite linear;
+}
+
+.moon {
+  background-color: #ecf0f1;
+  box-shadow: 0 0 15px #ecf0f1;
+  /* Animation to move the moon and control its visibility */
+  animation: moon-path 15s infinite linear;
+  opacity: 0; /* Start with the moon hidden */
+}
+
+/* Keyframes for the sun's path */
+@keyframes sun-path {
+  0% {
+      transform: translate(-50vw, 25vh) rotate(0deg);
+      opacity: 1;
+  }
+  25% {
+      transform: translate(0vw, -30vh) rotate(-90deg);
+  }
+  50% {
+      transform: translate(50vw, 25vh) rotate(-180deg);
+      opacity: 1;
+  }
+  51% {
+      opacity: 0; /* Sun disappears after setting */
+  }
+  100% {
+      transform: translate(-50vw, 25vh) rotate(-360deg);
+      opacity: 0;
+  }
+}
+
+/* Keyframes for the moon's path and visibility */
+@keyframes moon-path {
+  0% {
+      opacity: 0;
+  }
+  50% {
+      transform: translate(50vw, 25vh) rotate(0deg);
+      opacity: 0;
+  }
+  51% {
+      opacity: 1; /* Moon appears after sunset */
+  }
+  75% {
+      transform: translate(0vw, -30vh) rotate(-90deg);
+  }
+  100% {
+      transform: translate(-50vw, 25vh) rotate(-180deg);
+      opacity: 1;
+  }
+}
+
+/* Keyframes for the sky's background color change */
+@keyframes sky-change {
+  0% {
+      background-color: #87ceeb; /* Light Blue - Day */
+  }
+  40% {
+      background-color: #87ceeb;
+  }
+  60% {
+      background-color: #1c2833; /* Dark Blue - Night */
+  }
+  90% {
+      background-color: #1c2833;
+  }
+  100% {
+      background-color: #87ceeb;
+  }
+}
