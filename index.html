@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Balakrishnan M | Resume</title>
+  <title>Balakrishnan M | Portfolio</title>
   <style>
     :root {
       --primary: #4b6cb7;
@@ -16,8 +16,63 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: var(--bg);
       color: var(--text);
+      background-color: var(--bg);
+    }
+
+    .scene {
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      overflow: hidden;
+      animation: sky-change 15s infinite linear;
+    }
+
+    .sun, .moon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+    }
+
+    .sun {
+      background-color: #f1c40f;
+      box-shadow: 0 0 20px #f1c40f, 0 0 40px #f1c40f;
+      animation: sun-path 15s infinite linear;
+    }
+
+    .moon {
+      background-color: #ecf0f1;
+      box-shadow: 0 0 15px #ecf0f1;
+      animation: moon-path 15s infinite linear;
+      opacity: 0;
+    }
+
+    @keyframes sun-path {
+      0% { transform: translate(-50vw, 25vh) rotate(0deg); opacity: 1; }
+      25% { transform: translate(0vw, -30vh) rotate(-90deg); }
+      50% { transform: translate(50vw, 25vh) rotate(-180deg); opacity: 1; }
+      51% { opacity: 0; }
+      100% { transform: translate(-50vw, 25vh) rotate(-360deg); opacity: 0; }
+    }
+
+    @keyframes moon-path {
+      0% { opacity: 0; }
+      50% { transform: translate(50vw, 25vh) rotate(0deg); opacity: 0; }
+      51% { opacity: 1; }
+      75% { transform: translate(0vw, -30vh) rotate(-90deg); }
+      100% { transform: translate(-50vw, 25vh) rotate(-180deg); opacity: 1; }
+    }
+
+    @keyframes sky-change {
+      0%, 40% { background-color: #87ceeb; }
+      60%, 90% { background-color: #1c2833; }
+      100% { background-color: #87ceeb; }
     }
 
     header {
@@ -70,17 +125,16 @@
     }
 
     @media (max-width: 600px) {
-      header h1 {
-        font-size: 28px;
-      }
-
-      header p {
-        font-size: 16px;
-      }
+      header h1 { font-size: 28px; }
+      header p { font-size: 16px; }
     }
   </style>
 </head>
 <body>
+  <div class="scene">
+    <div class="sun"></div>
+    <div class="moon"></div>
+  </div>
 
   <header>
     <h1>Balakrishnan M</h1>
@@ -88,7 +142,7 @@
   </header>
 
   <main>
-    <section>
+    <section id="contact">
       <h2>Contact</h2>
       <p><strong>Location:</strong> Paramakudi, Ramanathapuram</p>
       <p><strong>Email:</strong> <a href="mailto:balav8253@gmail.com">balav8253@gmail.com</a></p>
@@ -101,31 +155,31 @@
       </p>
     </section>
 
-    <section>
+    <section id="profile">
       <h2>Profile</h2>
       <p>As a passionate and dedicated computer science engineering student, I aim to leverage my technical knowledge and problem-solving skills in software engineering to create innovative and efficient solutions. My goal is to contribute to impactful projects while continuously learning and growing in a dynamic environment.</p>
     </section>
 
-    <section>
+    <section id="technologies">
       <h2>Technologies</h2>
       <p><strong>Languages:</strong> Java, C++, Python, HTML, CSS</p>
       <p><strong>Tools & Frameworks:</strong> React, MongoDB, Firebase</p>
     </section>
 
-    <section>
+    <section id="projects">
       <h2>Projects</h2>
       <p><strong>Smart Assistive Wheelchair:</strong> Developed "Vision-Move", a hands-free wheelchair system using CNN-based eye movement detection and offline voice commands. Integrated ultrasonic sensors, Arduino, Raspberry Pi, and Zigbee for safe and reliable mobility.</p>
       <p><strong>Smart Automatic Water Meter for Irrigation:</strong> Created a system using sensors to monitor water usage and automate irrigation based on soil moisture data, optimizing water consumption in agriculture.</p>
     </section>
 
-    <section>
+    <section id="education">
       <h2>Education</h2>
       <p><strong>PSNA College of Engineering and Technology</strong> – BE in Computer Science<br>GPA: 7.36/10 (till 4th Sem)</p>
       <p><strong>Ayira Vaisiya Higher Secondary School</strong> – HSC: 72%</p>
       <p><strong>Ayira Vaisiya Higher Secondary School</strong> – SSLC: 69%</p>
     </section>
 
-    <section>
+    <section id="achievements">
       <h2>Achievements</h2>
       <ul>
         <li>Impairathon 2024</li>
@@ -133,6 +187,5 @@
       </ul>
     </section>
   </main>
-
 </body>
 </html>
