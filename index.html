@@ -6,58 +6,79 @@
   <title>Balakrishnan M | Resume</title>
   <style>
     :root {
-      --primary: #4b6cb7;
-      --secondary: #182848;
-      --bg: #f4f4f4;
-      --card: #ffffff;
-      --text: #333333;
+      --orange: #ff9800;
+      --orange-dark: #e65100;
+      --bg: #000000;
+      --text: #ffffff;
+      --card-bg: #1c1c1c;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
     body {
-      margin: 0;
       font-family: 'Segoe UI', sans-serif;
       background-color: var(--bg);
       color: var(--text);
+      overflow-x: hidden;
     }
 
     header {
-      background: linear-gradient(to right, var(--primary), var(--secondary));
-      color: white;
-      padding: 40px 20px;
+      background: linear-gradient(to right, var(--orange-dark), var(--orange));
+      padding: 50px 20px;
       text-align: center;
+      animation: slideIn 1.2s ease-out forwards;
+    }
+
+    header img {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid white;
+      margin-bottom: 15px;
     }
 
     header h1 {
-      margin: 0;
       font-size: 36px;
-    }
-
-    header p {
-      margin-top: 10px;
-      font-size: 18px;
-    }
-
-    main {
-      max-width: 1000px;
-      margin: 30px auto;
-      padding: 20px;
-    }
-
-    section {
-      background-color: var(--card);
-      margin-bottom: 20px;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    h2 {
-      color: var(--primary);
       margin-bottom: 10px;
     }
 
+    header p {
+      font-size: 18px;
+      opacity: 0.9;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+      animation: slideIn 1.5s ease-out forwards;
+    }
+
+    section {
+      background-color: var(--card-bg);
+      margin-bottom: 25px;
+      padding: 25px;
+      border-left: 6px solid var(--orange);
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(255, 152, 0, 0.2);
+      transform: translateX(-100vw);
+      opacity: 0;
+      animation: fadeSlide 0.8s ease-out forwards;
+      animation-delay: calc(var(--order, 0) * 0.2s + 1.5s);
+    }
+
+    h2 {
+      color: var(--orange);
+      margin-bottom: 12px;
+    }
+
     a {
-      color: var(--primary);
+      color: var(--orange);
       text-decoration: none;
     }
 
@@ -69,6 +90,24 @@
       padding-left: 20px;
     }
 
+    @keyframes fadeSlide {
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateX(-100vw);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
     @media (max-width: 600px) {
       header h1 {
         font-size: 28px;
@@ -77,18 +116,25 @@
       header p {
         font-size: 16px;
       }
+
+      header img {
+        width: 100px;
+        height: 100px;
+      }
     }
   </style>
 </head>
 <body>
 
   <header>
+    <img src="https://via.placeholder.com/140" alt="Profile Photo" />
+    <!-- Replace the above URL with your actual profile photo -->
     <h1>Balakrishnan M</h1>
     <p>Computer Science Engineering Student</p>
   </header>
 
   <main>
-    <section>
+    <section style="--order: 0">
       <h2>Contact</h2>
       <p><strong>Location:</strong> Paramakudi, Ramanathapuram</p>
       <p><strong>Email:</strong> <a href="mailto:balav8253@gmail.com">balav8253@gmail.com</a></p>
@@ -101,38 +147,37 @@
       </p>
     </section>
 
-    <section>
+    <section style="--order: 1">
       <h2>Profile</h2>
       <p>As a passionate and dedicated computer science engineering student, I aim to leverage my technical knowledge and problem-solving skills in software engineering to create innovative and efficient solutions. My goal is to contribute to impactful projects while continuously learning and growing in a dynamic environment.</p>
     </section>
 
-    <section>
+    <section style="--order: 2">
       <h2>Technologies</h2>
       <p><strong>Languages:</strong> Java, C++, Python, HTML, CSS</p>
       <p><strong>Tools & Frameworks:</strong> React, MongoDB, Firebase</p>
     </section>
 
-    <section>
+    <section style="--order: 3">
       <h2>Projects</h2>
       <p><strong>Smart Assistive Wheelchair:</strong> Developed "Vision-Move", a hands-free wheelchair system using CNN-based eye movement detection and offline voice commands. Integrated ultrasonic sensors, Arduino, Raspberry Pi, and Zigbee for safe and reliable mobility.</p>
       <p><strong>Smart Automatic Water Meter for Irrigation:</strong> Created a system using sensors to monitor water usage and automate irrigation based on soil moisture data, optimizing water consumption in agriculture.</p>
     </section>
 
-    <section>
+    <section style="--order: 4">
       <h2>Education</h2>
       <p><strong>PSNA College of Engineering and Technology</strong> – BE in Computer Science<br>GPA: 7.36/10 (till 4th Sem)</p>
       <p><strong>Ayira Vaisiya Higher Secondary School</strong> – HSC: 72%</p>
       <p><strong>Ayira Vaisiya Higher Secondary School</strong> – SSLC: 69%</p>
     </section>
 
-    <section>
+    <section style="--order: 5">
       <h2>Achievements</h2>
       <ul>
-        <li>Impairathon 2024</li>
-        <li>Inter College Ideafest</li>
+        <li>Impairathon 2024 – Participated with Vision-Move Smart Wheelchair</li>
       </ul>
     </section>
   </main>
 
 </body>
-</html>   
+</html>
