@@ -3,170 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Balakrishnan | Portfolio</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: "Poppins", sans-serif;
-      background-color: #1a1a1a;
-      color: #f2f2f2;
-    }
-
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 60px;
-      background: #111;
-    }
-
-    header .logo {
-      display: flex;
-      align-items: center;
-      font-size: 1.3rem;
-      font-weight: bold;
-    }
-
-    header .logo img {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      margin-right: 10px;
-    }
-
-    nav a {
-      margin-left: 30px;
-      text-decoration: none;
-      color: #ccc;
-      font-weight: 500;
-      transition: 0.3s;
-    }
-
-    nav a:hover {
-      color: #00e6ff;
-    }
-
-    .container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 60px;
-    }
-
-    .text-section {
-      max-width: 600px;
-    }
-
-    .role {
-      color: #aaa;
-      margin-bottom: 10px;
-    }
-
-    .name {
-      font-size: 2.5rem;
-      font-weight: bold;
-      color: #fff;
-      margin-bottom: 20px;
-      text-shadow: 0 0 10px #00e6ff, 0 0 20px #9b4dff;
-    }
-
-    .bio {
-      font-size: 1rem;
-      line-height: 1.6;
-      margin-bottom: 25px;
-      color: #ddd;
-    }
-
-    .buttons a {
-      display: inline-block;
-      margin-right: 15px;
-      padding: 10px 20px;
-      border: 2px solid #00e6ff;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: bold;
-      color: #00e6ff;
-      transition: 0.3s;
-    }
-
-    .buttons a:hover {
-      background: #00e6ff;
-      color: #111;
-    }
-
-    .image-section {
-      position: relative;
-    }
-
-    .image-section img {
-      width: 300px;
-      height: 300px;
-      border-radius: 50%;
-      border: 6px solid #333;
-      box-shadow: 0 0 25px #00e6ff, 0 0 40px #9b4dff;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9rem;
-      color: #888;
-      border-top: 1px solid #333;
-    }
-
-    footer a {
-      color: #ec6d0c;
-      text-decoration: none;
-      margin: 0 10px;
-      transition: 0.3s;
-    }
-
-    footer a:hover {
-      color: #6e6f74;
-    }
-  </style>
+  <title>Balakrishnan's Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
-    <div class="logo">
-      <img src="image1.jpg" alt="Profile">
-      <span>Balakrishnan</span>
-    </div>
+    <div class="logo">Balakrishnan</div>
     <nav>
-      <a href="#">Home</a>
-      <a href="About.html">About Me</a>
-      <a href="#">Projects</a>
-      <a href="#">Contact</a>
+      <a href="#about">About Me</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <div class="container">
-    <div class="text-section">
-      <div class="role">Software Enthusiast</div>
-      <div class="name">Balakrishnan</div>
-      <div class="bio">
-         I’m passionate about building smart systems and experimenting with AI, IoT, and web technologies. 
-  This is my personal space where I share my projects, ideas, and work.  
-  I love solving real-world problems through technology and continuously learning new tools, frameworks, and concepts.  
-  My interests also include creating innovative solutions in embedded systems, automation, and deep learning applications.  
-  Beyond coding, I enjoy collaborating on impactful projects, mentoring peers, and exploring how technology can make life simpler and smarter.
-      </div>
-      <div class="buttons">
-        <a href="#">Know More</a>
-        <a href="#">My Projects</a>
-      </div>
-    </div>
+  <section id="about">
+    <h1>About Me</h1>
+    <p>I am a Software Enthusiast passionate about building innovative solutions.</p>
+  </section>
 
-    <div class="image-section">
-      <img src="image1.jpg" alt="Balakrishnan">
+  <section id="projects">
+    <h1>Projects</h1>
+    <div class="project">
+      <h2>Project 1</h2>
+      <p>Description of the project.</p>
     </div>
-  </div>
+    <div class="project">
+      <h2>Project 2</h2>
+      <p>Description of the project.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h1>Contact</h1>
+    <p>Email: your-email@example.com</p>
+  </section>
 
   <footer>
-    © 2025 Balakrishnan | 
-    <a href="https://www.instagram.com/bala__swag/?next=%2F&hl=en" target="_blank">Instagram</a> | 
-    <a href="https://www.linkedin.com/in/balakrishnan-mahalingam-173367264/" target="_blank">LinkedIn</a> | 
-    <a href="https://github.com/bala2004end" target="_blank">GitHub</a>
+    <p>© 2023 Balakrishnan</p>
   </footer>
 </body>
 </html>
